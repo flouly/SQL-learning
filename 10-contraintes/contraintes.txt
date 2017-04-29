@@ -1,0 +1,25 @@
+-----------------------------------
+Les contraintes d integrite
+------------------------------------
+Il ne peut pas y avoir plus de contraintes que de FK
+
+Sous PMA
+
+1 Creer BDD
+
+2 Verifier moteur InnoDB qui gere les contraintes d integrite contrairement a MyISAM
+
+3 Declarer un index sur les champs que l on souhaite passer en cle etrangere : ici id_fourn ; cliquer sur index de champs correspondant dans STRUCTURE
+
+4 CREER une contraintes entre la FK et la PK on va dans STRUCTURE puis "sur vue relationnelle" :
+    ->  NO ACTION ou RESTRICT    on ne peut pas supprimer  ou updater un fournisseur si il est present dans la table article.NO ACTION execute  d abord un delete puis  RECREER l enregistrement alors que RESTRICT ne fais rien du tout
+
+    -> CASCADE  la suppression est effectuee par correspondance
+
+    -> SET NULL : la suppression n entraine pas la suppression des articles mais met NULL a la place 
+
+
+
+
+
+    

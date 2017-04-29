@@ -1,0 +1,50 @@
+-- *******************
+-- Presentation PHPMyAdmin
+-- *******************
+
+
+-- PMA est une interface d administration pour le sgbd MySQL.Il est ecrit en PHP et s appuie sur le serveur HTTP Apache (serveur Web)
+
+-- Administre :
+-- les BDD
+-- LES tables et leur champs
+-- les index, les cles primaires er etrangeres
+-- les utilisateurs de ls base et leur permissions
+-- exporter / importer les donnees dans divers formats
+
+-- Autres interfaces
+-- DbNinja, SQL Buddy, MyWebSQL
+
+
+--------------------------------------------------------
+Definition de types de champs :
+- INT nombre entier (taille maxi de 11 caracteres ;our une valeur entre -)
+- VARCHAR pour une chaine maxi de 255 caracteres
+- TEXT   65535 caracteres
+- DATE yyyy-mm-dd
+- DATETIME yyyy-mm-dd HH:ii:ss
+- FLOAT decimaux
+- ENUM pour un choix   'm', 'f'
+
+Definition attributs
+- Binary  pour rendre sinsible a la casse
+- Unsigned  pas de chiffres negatifs
+- Unsigned Zerofill  pas de chifffre negatifs + complete sved des 0 
+
+
+------------------------------------------
+IMPORT / EXPORT
+
+-via PHPMyAdmin
+
+-En ligne de commande : 
+EXPORT :
+cd /Applications/MAMP/library/bin
+
+./mysqldump -u root -p entreprise > monFichier.sql
+
+
+IMPORT:
+cd /Applications/MAMP/library/bin
+
+./mysql -u root -p import_monFichier <  monFichier.sql
